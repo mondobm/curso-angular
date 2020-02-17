@@ -14,6 +14,67 @@
         @include mobileGeneral{
             width: 100%;
         }
+        .file{
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute !important;
+            white-space: nowrap;
+            width: 1px;
+            
+        }
+
+        .label {
+            background: #f15d22;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+              font-family: 'Poppins', sans-serif;
+              font-size: inherit;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            outline: none;
+            padding: 1rem 50px;
+            position: relative;
+            transition: all 0.3s;
+            vertical-align: middle;
+            
+          
+            
+            &.btn-2 {
+              background-color: #99c793;
+              border-radius: 50px;
+              overflow: hidden;
+              
+              &::before {
+                color: #fff;
+                content: "\f382";
+                font-family: "Font Awesome 5 Pro";
+                font-size: 100%;
+                height: 100%;
+                right: 130%;
+                line-height: 3.3;
+                position: absolute;
+                top: 0px;
+                transition: all 0.3s;
+              }
+          
+              &:hover {
+                background-color: darken(#99c793, 30%);
+                  
+                &::before {
+                  right: 75%;
+                }
+              }
+
+              
+            }
+        }
+
     }
     .preview{
         width: 50%;
@@ -26,7 +87,7 @@
             display: flex;
             .main-img{
                 width: 70%;
-                height: 400px;
+                height: 300px;
                 img{
                     width: 100%;
                 }

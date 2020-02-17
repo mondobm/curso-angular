@@ -20,6 +20,7 @@ export class ProductoComponent implements OnInit {
     imagines:[]
   };
   img:string="";
+  previewImgs:"assets/imgs/mondo_no_image.png";
   
   //upload
   fileStorageRef:AngularFireStorageReference;
@@ -42,18 +43,18 @@ export class ProductoComponent implements OnInit {
             if(this.producto.imagines && this.producto.imagines.length > 0){
               this.img = this.producto.imagines[0];
             }else{
-              this.img = "https://www1.djicdn.com/cms/uploads/d21b3516988173bd21571c9ad980c238.png";
+              this.img = "assets/imgs/mondobm_no_image_2.png";
               this.producto.imagines = [];
             }
           },
           error=>{})
         }else{
           this.producto= {
-            nombre:"Super Drone con camera 4k",
-            description:"description",
+            nombre:"Nombre del producto",
+            description:"Description",
             precio:500
           }
-          this.img = "https://www1.djicdn.com/cms/uploads/d21b3516988173bd21571c9ad980c238.png";
+          this.img = "assets/imgs/mondobm_no_image_2.png";
         }
       })
     }

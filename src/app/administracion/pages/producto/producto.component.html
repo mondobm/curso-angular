@@ -13,20 +13,11 @@
             
             <div class="form-group">
                 <label for="img">Imagines</label>
-                <input type="file"  (change)="uploadHeader($event)" accept=".png,.jpg">
+                <input type="file" class="" (change)="uploadHeader($event)" accept=".png,.jpg">
                 <div class="progress">
                     <div class="progress-bar bg-success" [style.width]="(uploadProgress | async ) + '%'" [attr.aria-valuenow]="(uploadProgress | async )"  role="progressbar"   aria-valuemin="0" aria-valuemax="100">
                     </div>
                 </div>
-            </div>
-
-            <div class="form-group">
-                <label for="categoria">Categorias</label>
-                <select class="form-control" id="categoria">
-                    <option>Ropa</option>
-                    <option>Informatica</option>
-                    <option>Computadoras</option>
-                </select>
             </div>
             
             <div class="form-group">
@@ -44,6 +35,7 @@
                 <div class="img" *ngFor="let imagine of producto.imagines">
                     <img src="{{imagine}}">
                 </div>
+                <img src="assets/imgs/mondo_no_image.png" class="p-2" width="100"  height="100" alt="">
             </div>
         </div>
         <div class="info">

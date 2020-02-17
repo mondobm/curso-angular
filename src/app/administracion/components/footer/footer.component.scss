@@ -1,0 +1,41 @@
+@import "./.././../../../response.scss";
+
+.footer{
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    .sociales{
+        display: flex;
+        flex-direction:column ;
+        h5{
+            color:#f80040;
+        }
+        a{
+            height: 30px;
+            margin-bottom: 15px;
+            margin-right: 40%;
+            font-weight: bold;
+            margin-left: 40%;
+            color:#150941;
+            border: 1px solid black;
+            padding-top: 3px;
+            border-radius: 20px;
+            text-decoration: none;
+            background: transparent;
+
+            @include table{
+                font-size: 8pt;
+                padding-top: 5px;
+            }
+
+            @include mobileGeneral{
+               font-size: 10pt;
+               width: 100%;
+               margin: 0;
+            }
+        }
+    }
+    
+    .tel{
+
+    }
+}

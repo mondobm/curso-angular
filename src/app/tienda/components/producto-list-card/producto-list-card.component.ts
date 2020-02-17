@@ -16,8 +16,11 @@ export class ProductoListCardComponent implements OnInit {
       resp.forEach(producto=>{
         let productoData = producto.data();
         productoData.id = producto.id;
-        this.productos.push(productoData)
+        if(productoData.imagines){
+          this.productos.push(productoData)
+        }
       })
+      console.log(this.productos)
     })
   }
 

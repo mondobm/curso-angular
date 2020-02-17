@@ -1,8 +1,15 @@
+@import "./../../../../response.scss";
+
 .productos{
     padding-left: 2%;
     padding-right: 2%;
     img{
         width: 50px;
         height: 60px;
+    }   
+    .mobile{
+        @include mobileGeneral{
+            display: none;
+        }
     }
 }

@@ -25,7 +25,17 @@ export class ProductoListComponent implements OnInit {
   borrar(id:string){
     this.productoService.borrar(id).then(resp=>{
       console.log("Borrar")
+      this.borrarLista(id);
     });
   }
-  
+
+  private borrarLista(id:string){
+    let index = 0;
+    for(index;index<this.productos.length;index++){ 
+      if(this.productos[index].id == id){
+        this.productos.splice(index,1);
+      }
+    }
+  }
+
 }
