@@ -1,0 +1,26 @@
+<div class="productos">
+    <a href="administracion/producto">Nuevo producto</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of productos">
+                <th scope="row">
+                    <div *ngIf="producto.imagines && producto.imagines[0]; else elseBlock"><img src="{{producto.imagines[0]}}"></div>
+                    <ng-template #elseBlock><img src="https://www1.djicdn.com/cms/uploads/d21b3516988173bd21571c9ad980c238.png"></ng-template>
+                </th>
+                <td><a href="administracion/producto/{{producto.id}}">{{producto.nombre | slice:0:15 }}</a></td>
+                <td>{{producto.precio | currency}}</td>
+                <td>{{producto.descripcion | slice:0:25}}...</td>
+                <td><a (click)="borrar(producto.id)" class="btn btn-danger">X</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
