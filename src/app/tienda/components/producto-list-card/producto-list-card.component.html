@@ -1,0 +1,22 @@
+<div class="producto-card">
+    <div class="card" *ngFor="let producto of productos">
+        <div class="card-top">
+            <div *ngIf="producto.imagines[0]; else elseBlock"><img src="{{producto.imagines[0]}}"></div>
+            <ng-template #elseBlock><img src="https://www1.djicdn.com/cms/uploads/d21b3516988173bd21571c9ad980c238.png"></ng-template>
+        </div>
+        <div class="nombre">
+            <h3>{{producto.nombre | slice:0:10}}...</h3>
+        </div>
+        <div class="card-info">
+            <div class="precio">    
+                {{producto.precio | currency}}
+            </div>
+            <div class="button">
+               <a class="btn btn btn-outline-secondary btn-sm" href="tienda/producto/{{producto.id}}">Comprar</a>
+            </div>
+        </div>
+        <div class="card-text">
+            <p>{{producto.descripcion | slice:0:25}}</p>
+        </div>
+    </div>
+</div>

@@ -11,6 +11,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AdministracionModule } from './administracion/administracion.module';
+import { TiendaModule } from './tienda/tienda.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AdministracionModule } from './administracion/administracion.module';
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     BrowserAnimationsModule,
-    AdministracionModule
+    AdministracionModule,
+    TiendaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

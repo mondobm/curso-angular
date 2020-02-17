@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="producto">
+    
+    <div class="portada row">
+        <div class="col-lg-2"></div>
+        <img class="main-img col-lg-6" src="{{img}}">
+        <div class="preview-img col-lg-3">
+            <div class="img" *ngFor="let imagine of producto.imagines">
+                <a (click)="updatePreview(imagine)"><img src="{{imagine}}"></a>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+ 
+   <div class="info">
+        <div class="title">
+            <h2>{{producto.nombre}}</h2>
+        </div>
+        <div class="text">
+            <div class="precio">
+                <p>{{producto.precio | currency}}</p>
+            </div>
+            <P>
+                {{producto.descripcion}}
+            </P>
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>  
